@@ -1,0 +1,9 @@
+---
+apiVersion: kubeaddons.mesosphere.io/v1beta1
+kind: AddonRepository
+metadata:
+  name: kubeflow
+spec:
+  priority: "1"
+  url: "https://github.com/mesosphere/kubeaddons-kubeflow"
+  ref: "master"

@@ -1,0 +1,38 @@
+apiVersion: kubeaddons.mesosphere.io/v1beta1
+kind: ClusterAddon
+metadata:
+  annotations:
+    appversion.kubeaddons.mesosphere.io/nfs-server-provisioner: 2.3.0
+    catalog.kubeaddons.mesosphere.io/addon-revision: 2.3.0-1
+    values.chart.helm.kubeaddons.mesosphere.io/awsebscsiprovisioner: "https://raw.githubusercontent.com/mesosphere/charts/master/staging/nfs-server-provisioner/values.yaml"
+  labels:
+    kubeaddons.mesosphere.io/name: nfsserverprovisioner
+    kubeaddons.mesosphere.io/provides: storageclass
+  name: nfsserverprovisioner
+  namespace: kubeaddons
+spec:
+  kubernetes:
+    minSupportedVersion: v1.15.6
+  cloudProvider:
+    - name: aws
+      enabled: false
+    - name: azure
+      enabled: false
+    - name: docker
+      enabled: false
+    - name: none
+      enabled: false
+  chartReference:
+    chart: nfs-server-provisioner
+    repo: https://mesosphere.github.io/charts/staging
+    version: 0.6.0
+    values: |
+      persistence:
+        enabled: true
+        size: 100Gi
+      storageClass:
+        name: nfsserverprovisioner
+      resources:
+        requests:
+           cpu: 50m
+           memory: 256Mi

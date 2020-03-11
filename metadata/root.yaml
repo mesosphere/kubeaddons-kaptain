@@ -1,0 +1,14 @@
+nfsserverprovisioner:
+  display_name: nfsserverprovisioner
+  description: nfsserverprovisioner
+  logo: nfsserverprovisioner/logo.svg
+  category: other
+  overview: nfsserverprovisioner/overview.md
+  resources:
+    links:
+      - type: resources
+        title: Documentation
+        link: https://github.com/helm/charts/tree/master/stable/nfs-server-provisioner
+      - type: support
+        title: Submit a Support Request
+        link: https://d2iq.com/services-and-support
