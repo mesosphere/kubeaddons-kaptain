@@ -4,7 +4,7 @@ metadata:
   annotations:
     appversion.kubeaddons.mesosphere.io/nfs-server-provisioner: 2.3.0
     catalog.kubeaddons.mesosphere.io/addon-revision: 2.3.0-1
-    values.chart.helm.kubeaddons.mesosphere.io/awsebscsiprovisioner: "https://raw.githubusercontent.com/mesosphere/charts/master/staging/nfs-server-provisioner/values.yaml"
+    values.chart.helm.kubeaddons.mesosphere.io/nfsserverprovisioner: "https://raw.githubusercontent.com/mesosphere/charts/master/staging/nfs-server-provisioner/values.yaml"
   labels:
     kubeaddons.mesosphere.io/name: nfsserverprovisioner
     kubeaddons.mesosphere.io/provides: storageclass
@@ -33,6 +33,9 @@ spec:
       storageClass:
         name: nfsserverprovisioner
       resources:
+        limits:
+           cpu: 1000m
+           memory: 1024Mi
         requests:
            cpu: 50m
            memory: 256Mi
