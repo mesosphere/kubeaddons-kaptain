@@ -8,6 +8,9 @@ metadata:
   labels:
     kubeaddons.mesosphere.io/name: nfsserverprovisioner
     kubeaddons.mesosphere.io/provides: storageclass
+    # TODO: we're temporarily supporting dependency on an existing default storage class
+    # on the cluster, this hack will trigger re-queue on Addons until one exists.
+    kubeaddons.mesosphere.io/hack-requires-defaultstorageclass: "true"
   name: nfsserverprovisioner
   namespace: kubeaddons
 spec:
