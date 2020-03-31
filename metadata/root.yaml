@@ -1,3 +1,19 @@
+---
+knative:
+  display_name: knative
+  description: knative
+  logo: knative/logo.svg
+  category: other
+  overview: knative/overview.md
+  resources:
+    links:
+      - type: resources
+        title: Documentation
+        link: https://github.com/mesosphere/charts/tree/master/staging/knative
+      - type: support
+        title: Submit a Support Request
+        link: https://d2iq.com/services-and-support
+---
 nfsserverprovisioner:
   display_name: nfsserverprovisioner
   description: nfsserverprovisioner
