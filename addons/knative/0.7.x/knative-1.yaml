@@ -7,7 +7,6 @@ metadata:
     values.chart.helm.kubeaddons.mesosphere.io/knative: "https://raw.githubusercontent.com/mesosphere/charts/master/staging/knative/values.yaml"
   labels:
     kubeaddons.mesosphere.io/name: knative
-    kubeaddons.mesosphere.io/provides: storageclass
   name: knative
   namespace: kubeaddons
 spec:
