@@ -14,12 +14,12 @@ knative:
         title: Submit a Support Request
         link: https://d2iq.com/services-and-support
 ---
-nfsserverprovisioner:
-  display_name: nfsserverprovisioner
-  description: nfsserverprovisioner
-  logo: nfsserverprovisioner/logo.svg
+kubeflow-nfsserverprovisioner:
+  display_name: kubeflow-nfsserverprovisioner
+  description: kubeflow-nfsserverprovisioner
+  logo: kubeflow-nfsserverprovisioner/logo.svg
   category: other
-  overview: nfsserverprovisioner/overview.md
+  overview: kubeflow-nfsserverprovisioner/overview.md
   resources:
     links:
       - type: resources
