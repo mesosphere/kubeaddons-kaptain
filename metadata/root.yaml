@@ -1,9 +1,25 @@
-nfsserverprovisioner:
-  display_name: nfsserverprovisioner
-  description: nfsserverprovisioner
-  logo: nfsserverprovisioner/logo.svg
+---
+knative:
+  display_name: knative
+  description: knative
+  logo: knative/logo.svg
   category: other
-  overview: nfsserverprovisioner/overview.md
+  overview: knative/overview.md
+  resources:
+    links:
+      - type: resources
+        title: Documentation
+        link: https://github.com/mesosphere/charts/tree/master/staging/knative
+      - type: support
+        title: Submit a Support Request
+        link: https://d2iq.com/services-and-support
+---
+kubeflow-nfsserverprovisioner:
+  display_name: kubeflow-nfsserverprovisioner
+  description: kubeflow-nfsserverprovisioner
+  logo: kubeflow-nfsserverprovisioner/logo.svg
+  category: other
+  overview: kubeflow-nfsserverprovisioner/overview.md
   resources:
     links:
       - type: resources
