@@ -10,9 +10,6 @@ metadata:
   name: knative
   namespace: kubeaddons
 spec:
-  requires:
-    - matchLabels:
-        kubeaddons.mesosphere.io/name: istio
   kubernetes:
     minSupportedVersion: v1.15.6
   cloudProvider:
