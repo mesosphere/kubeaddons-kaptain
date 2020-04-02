@@ -40,6 +40,6 @@ spec:
         gateway:
           https:
             enabled: false
-        namesapceKnativeServing:
+        namespaceKnativeServing:
           additionalLabels:
             ca.istio.io/override: "true"
