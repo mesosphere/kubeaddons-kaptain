@@ -6,12 +6,12 @@ metadata:
     catalog.kubeaddons.mesosphere.io/addon-revision: 2.3.0-1
     values.chart.helm.kubeaddons.mesosphere.io/nfsserverprovisioner: "https://raw.githubusercontent.com/mesosphere/charts/master/staging/nfs-server-provisioner/values.yaml"
   labels:
-    kubeaddons.mesosphere.io/name: kubeflow-nfsserverprovisioner
+    kubeaddons.mesosphere.io/name: kubeflow-nfs
     kubeaddons.mesosphere.io/provides: storageclass
     # TODO: we're temporarily supporting dependency on an existing default storage class
     # on the cluster, this hack will trigger re-queue on Addons until one exists.
     kubeaddons.mesosphere.io/hack-requires-defaultstorageclass: "true"
-  name: kubeflow-nfsserverprovisioner
+  name: kubeflow-nfs
   namespace: kubeaddons
 spec:
   kubernetes:
