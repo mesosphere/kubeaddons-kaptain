@@ -34,7 +34,7 @@ spec:
         enabled: true
         domain: "svc.cluster.local"
         customMetricsApiservice:
-          enabeld: false
+          enabled: false
         namespaceKnativeServing:
           additionalLabels:
             ca.istio.io/override: "true"
