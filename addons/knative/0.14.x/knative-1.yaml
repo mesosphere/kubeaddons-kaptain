@@ -2,8 +2,8 @@ apiVersion: kubeaddons.mesosphere.io/v1beta1
 kind: ClusterAddon
 metadata:
   annotations:
-    appversion.kubeaddons.mesosphere.io/knative: 0.7.1
-    catalog.kubeaddons.mesosphere.io/addon-revision: 0.7.1-1
+    appversion.kubeaddons.mesosphere.io/knative: 0.14.0
+    catalog.kubeaddons.mesosphere.io/addon-revision: 0.14.0-1
     values.chart.helm.kubeaddons.mesosphere.io/knative: "https://raw.githubusercontent.com/mesosphere/charts/master/staging/knative/values.yaml"
   labels:
     kubeaddons.mesosphere.io/name: knative
@@ -24,7 +24,7 @@ spec:
   chartReference:
     chart: knative
     repo: https://mesosphere.github.io/charts/staging
-    version: 0.2.0
+    version: 0.3.0
     values: |
       eventing:
         enabled: false
@@ -32,11 +32,9 @@ spec:
         enabled: false
       serving:
         enabled: true
+        domain: "svc.cluster.local"
         customMetricsApiservice:
           enabeld: false
-        gateway:
-          https:
-            enabled: false
         namespaceKnativeServing:
           additionalLabels:
             ca.istio.io/override: "true"
