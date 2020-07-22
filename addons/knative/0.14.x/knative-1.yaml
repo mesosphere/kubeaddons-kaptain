@@ -32,7 +32,6 @@ spec:
         enabled: false
       serving:
         enabled: true
-        domain: "svc.cluster.local"
         customMetricsApiservice:
           enabled: false
         namespaceKnativeServing:
