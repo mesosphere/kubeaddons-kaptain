@@ -1,0 +1,36 @@
+apiVersion: kubeaddons.mesosphere.io/v1beta1
+kind: Addon
+metadata:
+  name: kubeflow
+  labels:
+    kubeaddons.mesosphere.io/name: kubeflow
+    kubeaddons.mesosphere.io/hack-requires-defaultstorageclass: "true"
+  annotations:
+    catalog.kubeaddons.mesosphere.io/addon-revision: "1.0.1-1"
+    appversion.kubeaddons.mesosphere.io/kubeflow: "1.0.1"
+spec:
+  kubernetes:
+    minSupportedVersion: v1.16.0
+  requires:
+    - matchLabels:
+        kubeaddons.mesosphere.io/name: istio
+    - matchLabels:
+        kubeaddons.mesosphere.io/name: dex
+    - matchLabels:
+        kubeaddons.mesosphere.io/name: cert-manager
+    - matchLabels:
+        kubeaddons.mesosphere.io/name: knative
+  cloudProvider:
+    - name: aws
+      enabled: false
+    - name: azure
+      enabled: false
+    - name: docker
+      enabled: false
+    - name: none
+      enabled: false
+  kudoReference:
+    package: kubeflow
+    repo: https://kudo-private.storage.googleapis.com
+    version: 0.2.0
+    appVersion: 1.0.1
