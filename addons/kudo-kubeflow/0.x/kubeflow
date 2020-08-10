@@ -1,5 +1,5 @@
 apiVersion: kubeaddons.mesosphere.io/v1beta1
-kind: Addon
+kind: ClusterAddon
 metadata:
   name: kubeflow
   labels:
@@ -31,6 +31,8 @@ spec:
       enabled: false
   kudoReference:
     package: kubeflow
+    name: kubeflow
+    namespace: kubeflow
     repo: https://kudo-private.storage.googleapis.com
     version: 0.2.0
     appVersion: 1.0.1
