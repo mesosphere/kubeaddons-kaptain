@@ -6,6 +6,8 @@ metadata:
     kubeaddons.mesosphere.io/name: kubeflow
     kubeaddons.mesosphere.io/hack-requires-defaultstorageclass: "true"
   annotations:
+    catalog.kubeaddons.mesosphere.io/skip-namespace-creation: "true"
+    kudo.kubeaddons.mesosphere.io/create-namespace: "true"
     catalog.kubeaddons.mesosphere.io/addon-revision: "1.0.1-1"
     appversion.kubeaddons.mesosphere.io/kubeflow: "1.0.1"
 spec:
