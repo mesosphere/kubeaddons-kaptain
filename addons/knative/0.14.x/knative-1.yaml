@@ -24,7 +24,7 @@ spec:
   chartReference:
     chart: knative
     repo: https://mesosphere.github.io/charts/staging
-    version: 0.3.1
+    version: 0.3.2
     values: |
       eventing:
         enabled: false
@@ -37,3 +37,5 @@ spec:
         namespaceKnativeServing:
           additionalLabels:
             ca.istio.io/override: "true"
+        deployment:
+          registriesSkippingTagResolving: ""
