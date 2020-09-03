@@ -3,7 +3,7 @@ kind: ClusterAddon
 metadata:
   annotations:
     appversion.kubeaddons.mesosphere.io/knative: 0.14.0
-    catalog.kubeaddons.mesosphere.io/addon-revision: 0.14.0-1
+    catalog.kubeaddons.mesosphere.io/addon-revision: 0.14.0-2
     values.chart.helm.kubeaddons.mesosphere.io/knative: "https://raw.githubusercontent.com/mesosphere/charts/master/staging/knative/values.yaml"
   labels:
     kubeaddons.mesosphere.io/name: knative
@@ -24,7 +24,7 @@ spec:
   chartReference:
     chart: knative
     repo: https://mesosphere.github.io/charts/staging
-    version: 0.3.1
+    version: 0.3.2
     values: |
       eventing:
         enabled: false
@@ -37,3 +37,5 @@ spec:
         namespaceKnativeServing:
           additionalLabels:
             ca.istio.io/override: "true"
+        configDeployment:
+          registriesSkippingTagResolving: ""
