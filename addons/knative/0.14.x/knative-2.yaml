@@ -34,8 +34,5 @@ spec:
         enabled: true
         customMetricsApiservice:
           enabled: false
-        namespaceKnativeServing:
-          additionalLabels:
-            ca.istio.io/override: "true"
         configDeployment:
           registriesSkippingTagResolving: ""
