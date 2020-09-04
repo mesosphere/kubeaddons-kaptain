@@ -35,4 +35,4 @@ spec:
         customMetricsApiservice:
           enabled: false
         configDeployment:
-          registriesSkippingTagResolving: "gcr.io,docker.io,index.docker.io,registry-1.docker.io,registry.hub.docker.com,mcr.microsoft.com,nvcr.io"
+          registriesSkippingTagResolving: "gcr.io,k8s.gcr.io,docker.io,index.docker.io,registry-1.docker.io,registry.hub.docker.com,quay.io,mcr.microsoft.com,nvcr.io"
