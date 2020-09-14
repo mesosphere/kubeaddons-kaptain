@@ -28,3 +28,18 @@ kubeflow-nfsserverprovisioner:
       - type: support
         title: Submit a Support Request
         link: https://d2iq.com/services-and-support
+---
+kubeflow:
+  display_name: kubeflow
+  description: kubeflow
+  logo: kubeflow/logo.svg
+  category: other
+  overview: kubeflow/overview.md
+  resources:
+    links:
+      - type: resources
+        title: Documentation
+        link: https://docs.d2iq.com/ksphere/kubeflow/
+      - type: support
+        title: Submit a Support Request
+        link: https://d2iq.com/services-and-support
