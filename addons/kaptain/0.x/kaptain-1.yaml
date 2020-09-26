@@ -8,7 +8,7 @@ metadata:
   annotations:
     kudo.kubeaddons.mesosphere.io/create-namespace: "true"
     catalog.kubeaddons.mesosphere.io/addon-revision: "1.0.1-1"
-    appversion.kubeaddons.mesosphere.io/kubeflow: "1.0.1"
+    appversion.kubeaddons.mesosphere.io/kaptain: "1.0.1"
 spec:
   namespace: kubeflow
   kubernetes:
