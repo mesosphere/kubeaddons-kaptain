@@ -4,7 +4,7 @@ metadata:
   annotations:
     appversion.kubeaddons.mesosphere.io/knative: 0.14.0
     catalog.kubeaddons.mesosphere.io/addon-revision: 0.14.0-3
-    values.chart.helm.kubeaddons.mesosphere.io/knative: "https://raw.githubusercontent.com/akirillov/charts/master/staging/knative/values.yaml"
+    values.chart.helm.kubeaddons.mesosphere.io/knative: "https://raw.githubusercontent.com/mesosphere/charts/master/staging/knative/values.yaml"
   labels:
     kubeaddons.mesosphere.io/name: knative
   name: knative
@@ -23,7 +23,7 @@ spec:
       enabled: false
   chartReference:
     chart: knative
-    repo: https://github.com/akirillov/charts/staging
+    repo: https://mesosphere.github.io/charts/staging
     version: 0.3.4
     values: |
       eventing:
