@@ -1,0 +1,38 @@
+apiVersion: kubeaddons.mesosphere.io/v1beta1
+kind: ClusterAddon
+metadata:
+  annotations:
+    appversion.kubeaddons.mesosphere.io/knative: 0.14.0
+    catalog.kubeaddons.mesosphere.io/addon-revision: 0.14.0-3
+    values.chart.helm.kubeaddons.mesosphere.io/knative: "https://raw.githubusercontent.com/mesosphere/charts/master/staging/knative/values.yaml"
+  labels:
+    kubeaddons.mesosphere.io/name: knative
+  name: knative
+  namespace: kubeaddons
+spec:
+  kubernetes:
+    minSupportedVersion: v1.15.6
+  cloudProvider:
+    - name: aws
+      enabled: false
+    - name: azure
+      enabled: false
+    - name: docker
+      enabled: false
+    - name: none
+      enabled: false
+  chartReference:
+    chart: knative
+    repo: https://mesosphere.github.io/charts/staging
+    version: 0.3.4
+    values: |
+      eventing:
+        enabled: false
+      eventing-sources:
+        enabled: false
+      serving:
+        enabled: true
+        customMetricsApiservice:
+          enabled: false
+        configDeployment:
+          registriesSkippingTagResolving: "gcr.io,k8s.gcr.io,docker.io,index.docker.io,registry-1.docker.io,registry.hub.docker.com,quay.io,mcr.microsoft.com,nvcr.io"
