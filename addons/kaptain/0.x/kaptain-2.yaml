@@ -37,5 +37,5 @@ spec:
     package: kubeflow
     name: kubeflow
     repo: https://kudo-private.storage.googleapis.com
-    version: 0.6.0-testing-2
+    version: 0.6.0
     appVersion: 1.0.1
