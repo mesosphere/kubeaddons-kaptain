@@ -1,3 +1,3 @@
 # Kaptain overview
 
-Please see the [Kaptain Doc](https://docs.d2iq.com/ksphere/kubeflow/) for more information.
+Please see the [Kaptain Docs](https://docs.d2iq.com/dkp/kaptain/) for more information.
