@@ -23,7 +23,7 @@ spec:
       enabled: false
   chartReference:
     chart: knative
-    repo: https://github.com/mesosphere/charts/tree/upgrade-knnative-serving-0.18.3/staging
+    repo: https://akirillov.github.io/charts/staging
     version: 0.3.5
     values: |
       eventing:
