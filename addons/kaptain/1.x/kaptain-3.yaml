@@ -1,0 +1,41 @@
+apiVersion: kubeaddons.mesosphere.io/v1beta1
+kind: ClusterAddon
+metadata:
+  name: kaptain
+  labels:
+    kubeaddons.mesosphere.io/name: kaptain
+    kubeaddons.mesosphere.io/hack-requires-defaultstorageclass: "true"
+  annotations:
+    kudo.kubeaddons.mesosphere.io/create-namespace: "true"
+    catalog.kubeaddons.mesosphere.io/addon-revision: "1.2.0-3"
+    appversion.kubeaddons.mesosphere.io/kaptain: "1.2.0"
+spec:
+  namespace: kubeflow
+  kubernetes:
+    minSupportedVersion: v1.16.0
+  requires:
+    - matchLabels:
+        kubeaddons.mesosphere.io/name: istio
+    - matchLabels:
+        kubeaddons.mesosphere.io/name: dex
+    - matchLabels:
+        kubeaddons.mesosphere.io/name: cert-manager
+    - matchLabels:
+        kubeaddons.mesosphere.io/name: knative
+    - matchLabels:
+        kubeaddons.mesosphere.io/name: prometheus
+  cloudProvider:
+    - name: aws
+      enabled: false
+    - name: azure
+      enabled: false
+    - name: docker
+      enabled: false
+    - name: none
+      enabled: false
+  kudoReference:
+    package: kubeflow
+    name: kubeflow
+    repo: https://kudo-private.storage.googleapis.com
+    version: 1.2.0
+    appVersion: 1.3.0
