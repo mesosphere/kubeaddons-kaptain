@@ -3,7 +3,7 @@ kind: ClusterAddon
 metadata:
   annotations:
     appversion.kubeaddons.mesosphere.io/knative: 0.18.3
-    catalog.kubeaddons.mesosphere.io/addon-revision: 0.18.3-1
+    catalog.kubeaddons.mesosphere.io/addon-revision: 0.18.3-2
     values.chart.helm.kubeaddons.mesosphere.io/knative: "https://raw.githubusercontent.com/mesosphere/charts/master/staging/knative/values.yaml"
   labels:
     kubeaddons.mesosphere.io/name: knative
