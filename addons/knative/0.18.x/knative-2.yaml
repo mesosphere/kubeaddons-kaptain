@@ -23,8 +23,8 @@ spec:
       enabled: false
   chartReference:
     chart: knative
-    repo: https://mesosphere.github.io/charts/staging
-    version: 0.3.6
+    repo: https://akirillov.github.io/charts/staging
+    version: 0.3.7
     values: |
       eventing:
         enabled: false
@@ -40,7 +40,8 @@ spec:
         configDeployment:
           registriesSkippingTagResolving: "gcr.io,k8s.gcr.io,docker.io,index.docker.io,registry-1.docker.io,registry.hub.docker.com,quay.io,mcr.microsoft.com,nvcr.io,public.ecr.aws"
         gc:
-          staleRevisionCreateDelay: "48h"
-          staleRevisionTimeout: "15h"
-          staleRevisionMinimumGenerations: "20"
-          staleRevisionLastpinnedDebounce: "5h"
+          responsiveRevisionGC: "allowed"
+          retainSinceCreateTime: "48h"
+          retainSinceLastActiveTime: "15h"
+          minNonActiveRevisions: "20"
+          maxNonActiveRevisions: "1000"
